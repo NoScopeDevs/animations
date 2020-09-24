@@ -1,0 +1,27 @@
+name: animations_talk
+description: null
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.3
+
+  animations: ^1.1.2
+  animate_do: ^1.7.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  very_good_analysis: ^1.0.2
+
+flutter:
+  uses-material-design: true
