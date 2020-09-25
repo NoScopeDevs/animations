@@ -40,6 +40,8 @@ class _Home extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: const FloatingActionButton(onPressed: null),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
