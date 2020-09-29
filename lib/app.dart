@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'explicit/explicit.dart';
 import 'implicit/implicit.dart';
@@ -20,28 +21,37 @@ class _Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: ListView(
-          shrinkWrap: true,
-          children: [
-            ListTile(
-              title: const Text('Implicit'),
-              onTap: () => Navigator.of(context).push(ImplicitAnimations.go()),
-            ),
-            ListTile(
-              title: const Text('Explicit'),
-              onTap: () => Navigator.of(context).push(ExplicitAnimations.go()),
-            ),
-            ListTile(
-              title: const Text('Packages'),
-              onTap: () => Navigator.of(context).push(PackageAnimations.go()),
-            ),
-          ],
+    return AnnotatedRegion(
+      value: SystemUiOverlayStyle.dark,
+      child: Scaffold(
+        body: Center(
+          child: ListView(
+            shrinkWrap: true,
+            children: [
+              ListTile(
+                title: const Text('Implicit'),
+                onTap: () => Navigator.of(context).push(
+                  ImplicitAnimations.go(),
+                ),
+              ),
+              ListTile(
+                title: const Text('Explicit'),
+                onTap: () => Navigator.of(context).push(
+                  ExplicitAnimations.go(),
+                ),
+              ),
+              ListTile(
+                title: const Text('Packages'),
+                onTap: () => Navigator.of(context).push(
+                  PackageAnimations.go(),
+                ),
+              ),
+            ],
+          ),
         ),
+        floatingActionButton: const FloatingActionButton(onPressed: null),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
-      floatingActionButton: const FloatingActionButton(onPressed: null),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
