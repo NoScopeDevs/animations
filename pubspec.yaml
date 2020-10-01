@@ -17,6 +17,7 @@ dependencies:
   animations: ^1.1.2
   animate_do: ^1.7.3
   flare_flutter: ^2.0.6
+  provider: ^4.3.2+2
 
 dev_dependencies:
   flutter_test:
